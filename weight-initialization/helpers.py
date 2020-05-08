@@ -104,6 +104,8 @@ def hist_dist(title, distribution_tensor, hist_range=(-4, 4)):
     """
     Display histogram of values in a given distribution tensor
     """
+    print(title)
+    bins = np.linspace(*hist_range, num=len(distribution_tensor)//2)
     plt.title(title)
-    plt.hist(distribution_tensor, np.linspace(*hist_range, num=len(distribution_tensor)/2))
+    plt.hist(distribution_tensor, bins)
     plt.show()
